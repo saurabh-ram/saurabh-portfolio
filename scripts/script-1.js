@@ -69,6 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
   function updateSkillImage() {
     currentImage = (currentImage % totalNoOfImages) + 1;
 
-    skillImage.src = `./skills/${currentImage}.png`;
+    skillImage.src = `https://raw.githubusercontent.com/saurabh-ram/saurabh-portfolio/refs/heads/main/skills/${currentImage}.png`;
   }
 });
