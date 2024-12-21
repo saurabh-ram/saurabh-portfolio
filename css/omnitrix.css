@@ -1,0 +1,361 @@
+.omnitrix-container {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  /* border: 10px solid black; */
+  box-sizing: border-box;
+}
+
+.dial-container {
+  width: 100%;
+  height: 70vh;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 10px solid grey; */
+  box-sizing: border-box;
+}
+
+#green-dial-bg {
+  width: 230px;
+  height: 230px;
+  background-color: #7cbf2b;
+  position: absolute;
+  border-radius: 50%;
+  /* transform:  translateY(25px); */
+  box-sizing: border-box;
+}
+
+.left-parallelogram-container {
+  width: 500px;
+  height: 260px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  border: 10px solid green;
+  /* transform:  translateY(25px); */
+  box-sizing: border-box;
+}
+
+.right-parallelogram-container {
+  width: 500px;
+  height: 260px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  border: 10px solid green;
+  /* transform:  translateY(25px); */
+  box-sizing: border-box;
+}
+
+#left-parallelogram {
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  /* background-color: #7cbf2b; */
+  /* left: 120px; */
+  /* left: 75px; */
+  left: 30px;
+  background-color: #656263;
+  transform: rotate(45deg) skew(12deg, 12deg);
+  border: 10px solid black;
+  box-sizing: border-box;
+  /* animation-name: omnitrix-movement-left;
+  animation-duration: 2s;
+  animation-fill-mode: forwards; */
+}
+
+#right-parallelogram {
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  /* background-color: #7cbf2b; */
+  /* right: 120px; */
+  /* right: 75px; */
+  right: 30px;
+  background-color: #656263;
+  transform: rotate(45deg) skew(12deg, 12deg);
+  overflow: hidden;
+  border: 10px solid black;
+  box-sizing: border-box;
+  /* animation-name: omnitrix-movement-right;
+  animation-duration: 2s;
+  animation-fill-mode: forwards; */
+}
+
+#right-bg-parallelogram {
+  /* width: 100%;
+  height: 100%; */
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  /* right: 45px;
+  top: 45px; */
+  /* right: 126.5px;
+  top: 126.5px; */
+  right: 206.5px;
+  top: 206.5px;
+  background-color: #7cbf2b;
+  border: 10px solid black;
+  box-sizing: border-box;
+  /* animation-name: omnitrix-movement-bg;
+  animation-duration: 2s;
+  animation-fill-mode: forwards; */
+}
+
+@keyframes omnitrix-movement-left{
+  0% {
+    left: 30px;
+  }
+  100% {
+    left: 120px;
+  }
+}
+
+@keyframes omnitrix-movement-right{
+  0% {
+    right: 30px;
+  }
+  100% {
+    right: 120px;
+  }
+}
+
+@keyframes omnitrix-movement-bg{
+  0% {
+    right: 206.5px;
+    top: 206.5px;
+  }
+  100% {
+    right: 45px;
+    top: 45px;
+  }
+}
+
+.animation2 {
+  animation-name: omnitrix-movement-left;
+}
+
+.animation3 {
+  animation-name: omnitrix-movement-right;
+}
+
+.animation4 {
+  animation-name: omnitrix-movement-bg;
+}
+
+.animation2, .animation3, .animation4 {
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.2s;
+  /* animation-timing-function: ease-in-out; */
+}
+
+
+
+
+
+
+#omnitrix-watch {
+  width: 100%;
+  height: 100%;
+  /* border: 10px solid; */
+  box-sizing: border-box;
+}
+
+#omnitrix-watch-container {
+  /* width: 320px;
+  height: 320px; */
+  width: 580px;
+  height: 580px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  /* border: 10px solid; */
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.omnitrix-ring-and-button-container {
+  width: 550px;
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 10px solid red; */
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+#omnitrix-ring {
+  width: 100%;
+  height: 100%;
+  /* animation-name: dial-spin;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out; */
+  /* border: 10px solid; */
+  box-sizing: border-box;
+}
+
+#omnitrix-ring-container {
+  /* width: 320px;
+  height: 320px; */
+  width: 390px;
+  height: 390px;
+  position: absolute;
+  /* border: 10px solid; */
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+@keyframes dial-spin{
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.animation5 {
+  animation-name: dial-spin;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+
+
+
+
+#omnitrix-button-container {
+  width: 410px;
+  height: 550px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  /* border: 10px solid black; */
+  box-sizing: border-box;
+}
+
+#button-frame-container-1 {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 13px;
+  position: absolute;
+  /* border: 10px solid grey; */
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.omnitrix-button {
+  width: 100px;
+  height: 105px;
+  margin-bottom: 11.25px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  /* border: 10px solid greenyellow; */
+  box-sizing: border-box;
+  /* animation-name: omnitrix-button;
+  animation-duration: 1s; */
+  z-index: 3;
+}
+
+#button-frame-container-2 {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 13px;
+  position: absolute;
+  /* border: 10px solid grey; */
+  box-sizing: border-box;
+  z-index: 4;
+}
+
+#button-frame-1 {
+  width: 100%;
+  height: 100%;
+  /* opacity: 40%; */
+}
+
+#omnitrix-button {
+  width: 100%;
+  height: auto;
+  /* opacity: 40%; */
+}
+
+#button-frame-3 {
+  width: 100%;
+  height: auto;
+  /* opacity: 40%; */
+}
+
+@keyframes omnitrix-button{
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animation1 {
+  animation-name: omnitrix-button;
+  animation-duration: 0.3s;
+}
+
+
+
+
+
+.skill-container {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 10px solid green; */
+  z-index: 3;
+}
+
+#skill-images {
+  width: 80px;
+  height: auto;
+  position: absolute;
+  /* border: 10px solid black; */
+}
+
+@keyframes opacity-effect{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.animation6 {
+  animation-name: opacity-effect;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-delay: 1.5s;
+}
+
+#skill-image {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+}

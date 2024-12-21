@@ -1,0 +1,227 @@
+
+/* #d1c9ff
+#7c7eff */
+
+body {
+  height: 100vh;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  /* border: 10px solid orange; */
+  /* Include border in total size */
+  box-sizing: border-box;
+}
+
+.border-boxing {
+  box-sizing: border-box;
+}
+
+#blue-sky-id, #blue-night-sky-id {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: -4;
+}
+
+.flex-page-container {
+  background-repeat: no-repeat;
+  /* border: 10px solid black; */
+  height: 100%;
+  width: auto;
+  position: relative;
+  display: flex;
+  /* Include border in total size */
+  /* box-sizing: border-box; */
+}
+
+.sun-container {
+  /* border: 10px solid rgb(149, 0, 0); */
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: row-reverse;
+  z-index: -3;
+  /* Include border in total size */
+  /* box-sizing: border-box; */
+}
+
+.moon-container {
+  /* border: 10px solid rgb(149, 0, 0); */
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  /* box-sizing: border-box; */
+}
+
+#sun-in-the-sky-id {
+  padding-top: 50px;
+  padding-right: 15px;
+  /* border: 10px solid yellow; */
+}
+
+#moon-in-the-sky-id {
+  padding-top: 50px;
+  /* border: 10px solid yellow; */
+}
+
+.sky-container {
+  width: 100%;
+  height: 100%;
+  /* box-sizing: border-box; */
+}
+
+#night-sky-id {
+  height: 100%;
+  width: 100%;
+  /* border: 10px solid green; */
+  position: absolute;
+  z-index: -2;
+  object-fit: cover;
+  object-position: left;
+  /* To overlap top border of the container */
+  top: 0;
+  /* To overlap left border of the container */
+  left: 0;
+  /* box-sizing: border-box; */
+}
+
+#day-sky-id {
+  height: 100%;
+  width: 100%;
+  /* border: 10px solid green; */
+  position: absolute;
+  object-fit: cover;
+  object-position: left;
+  /* To overlap top border of the container */
+  top: 0;
+  /* To overlap left border of the container */
+  left: 0;
+  /* box-sizing: border-box; */
+}
+
+.green-land-container {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column-reverse;
+  z-index: 1;
+}
+
+.green-land {
+  width: 100%;
+  height: 47px;
+  background-color: #B6A28E;
+}
+
+.landscape-nature-container {
+  position: absolute;
+  /* border: 10px solid yellow; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: end;
+  /* box-sizing: border-box; */
+  z-index: 1;
+}
+
+.garden-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  /* box-sizing: border-box; */
+  z-index: 2;
+}
+
+.green-garden {
+  /* border: 10px solid yellow; */
+  height: 400px;
+}
+
+/* #green-field {
+  opacity: 0.9;
+} */
+
+.bushes-container-1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: end;
+  /* box-sizing: border-box; */
+  z-index: 2;
+}
+
+.bushes-container-2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: end;
+  /* box-sizing: border-box; */
+  z-index: 3;
+}
+
+#bushes-1 {
+  height: 150px;
+  width: 200px;
+  max-width: 35%;  /* Ensure it doesn't exceed its container */
+  max-height: 100%; /* Adjust height to fit parent container */
+  object-fit: cover;
+  object-position: left;
+}
+
+#bushes-2 {
+  height: 250px;
+  width: 250px;
+  max-width: 45%;  /* Ensure it doesn't exceed its container */
+  max-height: 100%; /* Adjust height to fit parent container */
+  object-fit: cover;
+  object-position: right;
+}
+
+@media (max-width: 768px) {
+  body {
+    min-width: 580px;
+  }
+  #day-sky-id {
+    opacity: 0;
+  }
+
+  #blue-sky-id {
+    opacity: 0;
+  }
+  
+  .green-garden {
+    /* border: 10px solid yellow; */
+    max-height: 400px; /* Adjust height to fit parent container */
+    max-width: 100%;  /* Ensure it doesn't exceed its container */
+    min-height: 275px;    /*<<====*/
+    width: auto;      /* Maintain aspect ratio */
+    height: auto;     /* Maintain aspect ratio */
+  }
+}
+
+/* .site-background {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  position: absolute;
+  object-fit: cover;
+  border: 10px solid rgb(247, 51, 84);
+}
+
+ */
+/* #xy {
+  width: 100%;
+  height: 100px;
+  background-color: green;
+} */
+
