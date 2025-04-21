@@ -1,7 +1,21 @@
+
+:root {
+  --omnitrixSizeDefault: 580;
+  --omnitrixSize: 580;
+  --omnitrixSizeRatio: calc(var(--omnitrixSize) / var(--omnitrixSizeDefault));
+  --omnitrixMovement0: 30px;
+  --omnitrixMovement100: 130px;
+  --omnitrixMovementRight0: 224px;
+  --omnitrixMovementRight100: 45px;
+  --omnitrixMovementTop0: 224px;
+  --omnitrixMovementTop100: 45px;
+}
+
 .omnitrix-container {
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: 80%;
+  min-height: 600px;
   display: flex;
   align-items: center;
   /* border: 10px solid black; */
@@ -17,6 +31,14 @@
   align-items: center;
   /* border: 10px solid grey; */
   box-sizing: border-box;
+}
+
+#watchDial {
+  width: 202px;
+  height: 202px;
+  border-radius: 50%;
+  position: absolute;
+  overflow: hidden;
 }
 
 #green-dial-bg {
@@ -35,7 +57,7 @@
   position: absolute;
   display: flex;
   align-items: center;
-  border: 10px solid green;
+  /* border: 10px solid green; */
   /* transform:  translateY(25px); */
   box-sizing: border-box;
 }
@@ -46,7 +68,7 @@
   position: absolute;
   display: flex;
   align-items: center;
-  border: 10px solid green;
+  /* border: 10px solid green; */
   /* transform:  translateY(25px); */
   box-sizing: border-box;
 }
@@ -96,8 +118,8 @@
   top: 45px; */
   /* right: 126.5px;
   top: 126.5px; */
-  right: 206.5px;
-  top: 206.5px;
+  right: 224px;
+  top: 224px;
   background-color: #7cbf2b;
   border: 10px solid black;
   box-sizing: border-box;
@@ -108,30 +130,30 @@
 
 @keyframes omnitrix-movement-left{
   0% {
-    left: 30px;
+    left: var(--omnitrixMovement0);
   }
   100% {
-    left: 120px;
+    left: var(--omnitrixMovement100);
   }
 }
 
 @keyframes omnitrix-movement-right{
   0% {
-    right: 30px;
+    right: var(--omnitrixMovement0);
   }
   100% {
-    right: 120px;
+    right: var(--omnitrixMovement100);
   }
 }
 
 @keyframes omnitrix-movement-bg{
   0% {
-    right: 206.5px;
-    top: 206.5px;
+    right: var(--omnitrixMovementRight0);
+    top: var(--omnitrixMovementTop0);
   }
   100% {
-    right: 45px;
-    top: 45px;
+    right: var(--omnitrixMovementRight100);
+    top: var(--omnitrixMovementTop100);
   }
 }
 
@@ -160,8 +182,6 @@
 
 
 #omnitrix-watch {
-  width: 100%;
-  height: 100%;
   /* border: 10px solid; */
   box-sizing: border-box;
 }
@@ -355,7 +375,183 @@
 
 #skill-image {
   width: 100%;
-  height: 100%;
   opacity: 0;
+  height: 100%;
   visibility: hidden;
+}
+
+
+
+
+/* ----------------Media Queries---------------- */
+
+
+@media (max-width: 580px) {
+
+  :root {
+    --omnitrixSize: 480;
+    --omnitrixMovement0: calc(var(--omnitrixSizeRatio)* 30px);
+    --omnitrixMovement100: calc(var(--omnitrixSizeRatio)* 130px);
+    --omnitrixMovementRight0: calc(var(--omnitrixSizeRatio)* 224px);
+    --omnitrixMovementRight100: calc(var(--omnitrixSizeRatio)* 45px);
+    --omnitrixMovementTop0: calc(var(--omnitrixSizeRatio)* 224px);
+    --omnitrixMovementTop100: calc(var(--omnitrixSizeRatio)* 45px);
+  }
+
+  #watchDial {
+    width: calc(var(--omnitrixSizeRatio)* 202px);
+    height: calc(var(--omnitrixSizeRatio)* 202px);
+  }
+
+  #green-dial-bg {
+    width: calc(var(--omnitrixSizeRatio)* 230px);
+    height: calc(var(--omnitrixSizeRatio)* 230px);
+  }
+
+  .left-parallelogram-container {
+    width: calc(var(--omnitrixSizeRatio)* 500px);
+    height: calc(var(--omnitrixSizeRatio)* 260px);
+  }
+
+  .right-parallelogram-container {
+    width: calc(var(--omnitrixSizeRatio)* 500px);
+    height: calc(var(--omnitrixSizeRatio)* 260px);
+  }
+
+  #left-parallelogram {
+    width: calc(var(--omnitrixSizeRatio) * 180px);
+    height: calc(var(--omnitrixSizeRatio) * 180px);
+    left: calc(var(--omnitrixSizeRatio)* 30px);
+    border: calc(var(--omnitrixSizeRatio)* 10px) solid black;
+  }
+
+  #right-parallelogram {
+    width: calc(var(--omnitrixSizeRatio)* 180px);
+    height: calc(var(--omnitrixSizeRatio)* 180px);
+    right: calc(var(--omnitrixSizeRatio)* 30px);
+    border: calc(var(--omnitrixSizeRatio)* 10px) solid black;
+  }
+
+  #right-bg-parallelogram {
+    width: calc(var(--omnitrixSizeRatio)* 180px);
+    height: calc(var(--omnitrixSizeRatio)* 180px);
+    right: calc(var(--omnitrixSizeRatio)* 224px);
+    top: calc(var(--omnitrixSizeRatio)* 224px);
+    border: calc(var(--omnitrixSizeRatio)* 10px) solid black;
+  }
+
+  .skill-container {
+    width: calc(var(--omnitrixSizeRatio)* 190px);
+    height: calc(var(--omnitrixSizeRatio)* 190px);
+  }
+
+  #skill-images {
+    width: calc(var(--omnitrixSizeRatio)* 80px);
+  }
+
+
+
+
+  #skill-omnitrix {
+    width: 100%;
+    min-width: calc(var(--omnitrixSize) * 1px);
+    height: auto;
+  }
+
+  .omnitrix-container {
+    min-height: calc(var(--omnitrixSize) * 1px);
+  }
+
+  #omnitrix-watch-container {
+    width: calc(var(--omnitrixSize) * 1px);
+    height: calc(var(--omnitrixSize) * 1px);
+  }
+
+  #omnitrix-watch-container > #omnitrix-watch {
+    width: calc(var(--omnitrixSize) * 1px);
+    height: calc(var(--omnitrixSize) * 1px);
+  }
+
+  .omnitrix-ring-and-button-container {
+    width: calc(var(--omnitrixSizeRatio)* 550px);
+    height: calc(var(--omnitrixSizeRatio)* 550px);
+  }
+
+  #omnitrix-ring-container {
+    width: calc(var(--omnitrixSizeRatio)* 390px);
+    height: calc(var(--omnitrixSizeRatio)* 390px);
+  }
+
+  #omnitrix-button-container {
+    width: 150px;
+    height: calc(var(--omnitrixSizeRatio)* 550px);
+  }
+
+  #button-frame-container-1 {
+    width: calc(var(--omnitrixSizeRatio)* 100px);
+    height: calc(var(--omnitrixSizeRatio)* 100px);
+  }
+
+  .omnitrix-button {
+    width: calc(var(--omnitrixSizeRatio)* 100px);
+    height: calc(var(--omnitrixSizeRatio)* 105px);
+  }
+
+  #button-frame-container-2 {
+    width: calc(var(--omnitrixSizeRatio)* 100px);
+    height: calc(var(--omnitrixSizeRatio)* 100px);
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  :root {
+    --omnitrixSize: 420;
+  }
+
+}
+
+@media (max-width: 420px) {
+
+  :root {
+    --omnitrixSize: 300;
+  }
+
+  #omnitrix-button-container {
+    height: calc(var(--omnitrixSizeRatio)* 570px);
+  }
+
+}
+
+@media (max-width: 300px) {
+
+  :root {
+    --omnitrixSize: 250;
+  }
+
+}
+
+@media (max-width: 250px) {
+
+  :root {
+    --omnitrixSize: 200;
+  }
+
+  #omnitrix-button-container {
+    height: calc(var(--omnitrixSizeRatio)* 590px);
+  }
+
+}
+
+@media (max-width: 200px) {
+
+  :root {
+    --omnitrixSize: 165;
+  }
+
+  #omnitrix-button-container {
+    height: calc(var(--omnitrixSizeRatio)* 600px);
+  }
+
 }

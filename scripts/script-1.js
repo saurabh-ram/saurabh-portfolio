@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let animation2Completed = false;
   let animation5Completed = false;
   let currentImage = 1;
-  const totalNoOfImages = 15;
+  const totalNoOfImages = 27;
 
   // Trigger animation-1 on clicking image-1
   if (greenbutton && omnitrixbutton) {

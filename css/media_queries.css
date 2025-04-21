@@ -1,0 +1,230 @@
+@media (max-width: 1020px) {
+
+    .skill-set-container {
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: block;
+        /* border: 10px solid black; */
+    }
+
+    #skill-list {
+        width: 100%;
+        min-width: 300px;
+        height: auto;
+        /* border: 10px solid green; */
+        box-sizing: border-box;
+    }
+
+    #skill-omnitrix {
+        width: 100%;
+        min-width: 580px;
+        height: auto;
+        /* border: 10px solid blue; */
+        box-sizing: border-box;
+    }
+
+    .projects .personal-project,
+    .projects .personal-project-rv {
+        flex-direction: column-reverse;
+    }
+
+}
+
+@media not (max-width: 768px) {
+
+    #name-span {
+        color: #133e87;
+    }
+
+    .certifications-hobby-container {
+        display: flex;
+    }
+
+    .certifications-container,
+    .lang-hobby-container {
+        width: 100%;
+        padding: 0px 12px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    #day-sky-id {
+      opacity: 0;
+    }
+  
+    #blue-sky-id {
+      opacity: 0;
+    }
+    
+    .green-garden {
+      /* border: 10px solid yellow; */
+      max-height: 400px; /* Adjust height to fit parent container */
+      max-width: 100%;  /* Ensure it doesn't exceed its container */
+      min-height: 275px;    /*<<====*/
+      width: auto;      /* Maintain aspect ratio */
+      height: auto;     /* Maintain aspect ratio */
+    }
+}
+
+@media (max-width: 680px) {
+
+    #name-and-profession {
+        height: auto;
+        width: 100%;
+        position: absolute;
+        display: grid;
+        grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
+    }
+
+    #name-and-profession * {
+        grid-column: 2 / span 2;
+        color: white;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .image-cont > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+}
+
+@media (max-width: 520px) {
+
+    #name-and-profession {
+        grid-template-columns: 0.2fr 1fr 1fr 0.2fr;
+    }
+
+    .project-screenshot > a > img {
+        height: 220px;
+    }
+
+}
+
+@media (max-width: 420px) {
+
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    h2#profession {
+        font-size: 1.2rem;
+    }
+
+    .name-container {
+        padding: 0;
+    }
+
+    #name-and-profession {
+        padding-top: 100px;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+    }
+
+    #name-and-profession * {
+        grid-column: 1 / span 2;
+        text-align: center;
+    }
+
+    .summary-container p {
+        margin: 20px 20px;
+    }
+
+    .project-screenshot > a > img {
+        height: 160px;
+    }
+
+}
+
+@media (max-width: 300px) {
+
+    h1 {
+        font-size: 2.3rem;
+    }
+
+    .name-container {
+        padding: 0;
+    }
+
+    #name-and-profession {
+        padding-top: 145px;
+    }
+
+    .summary-container {
+        padding: 10px;
+    }
+
+    .summary-container p {
+        margin: 10px 10px;
+    }
+
+    #skill-list {
+        min-width: 150px;
+    }
+
+    .project-screenshot > a > img {
+        height: 120px;
+    }
+
+    .footer-container {
+        grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
+    }
+
+}
+
+@media (max-width: 230px) {
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2:not(#profession) {
+        font-size: 1.6rem;
+    }
+
+    .name-container {
+        padding: 0;
+    }
+
+    .summary-container {
+        padding: 10px;
+    }
+
+    #profile-picture {
+        height: 160px;
+    }
+
+    .project-screenshot > a > img {
+        height: 100px;
+    }
+
+    .academia-and-emp-hist ul ul {
+        padding: 0;
+    }
+
+}
+
+@media (max-width: 200px) {
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .project-screenshot > a > img {
+        height: 90px;
+    }
+
+    .footer-container {
+        grid-template-columns: 0.2fr 1fr 1fr 0.2fr;
+    }
+
+}
+
+
