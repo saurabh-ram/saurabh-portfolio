@@ -27,6 +27,7 @@ h1 {
 }
 
 .name-container {
+  padding: 0 20px;
   /* font-family: "Press Start 2P", system-ui; */
   /* font-family: "VT323", system-ui; */
   font-family: "Silkscreen", system-ui;
@@ -41,7 +42,7 @@ h1 {
 
 .data-container {
   padding-top: 8px;
-  height: 40%;
+  /* height: 40%; */
   width: 100%;
   display: flex;
   justify-content: center;
@@ -49,12 +50,23 @@ h1 {
   text-align: center;
 }
 
+.summary-container {
+  height: auto;
+  padding: 20px;
+  gap: 30px;
+}
+
 .summary-container p {
   margin: 0px 30px;
 }
 
 .blue-container {
-  background-color: #c9e6f0;
+  /* background-color: #c9e6f0; */
+  background-color: #A1E3F9;
+}
+
+.blue-bg {
+  background-color: #D1F8EF;
 }
 
 .style-container {
@@ -92,60 +104,12 @@ h1 {
   box-sizing: border-box;
 }
 
-@media (max-width: 1020px) {
-  .skill-set-container {
-    width: 100%;
-    height: auto;
-    position: relative;
-    display: block;
-    /* border: 10px solid black; */
-  }
-  
-  #skill-list {
-    width: 100%;
-    min-width: 580px;
-    height: auto;
-    /* border: 10px solid green; */
-    box-sizing: border-box;
-  }
-  
-  #skill-omnitrix {
-    width: 100%;
-    min-width: 580px;
-    height: auto;
-    /* border: 10px solid blue; */
-    box-sizing: border-box;
-  }  
-
-  .blue-container {
-    min-width: 580px;
-    background-color: #c9e6f0;
-  }
-}
-
-
 #experience-span {
   color: #133e87;
   font-weight: bolder;
 }
 
-@media not (max-width: 768px) {
-  #name-span {
-    color: #133e87;
-  }
-
-  .certifications-hobby-container {
-    display: flex;
-  }
-
-  .certifications-container, .lang-hobby-container {
-    width: 100%;
-    padding: 0px 12px;
-  }
-}
-
-p,
-li:not(h3 > li) {
+p, li:not(h3 > li) {
   font-size: 1.1rem;
   /* font-family: sans-serif; */
   font-family: "Jost", sans-serif;
@@ -226,7 +190,8 @@ h2:not(#profession) {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 50px);
-  background-color: rgb(24, 24, 66);
+  /* background-color: rgb(24, 24, 66); */
+  background-color: #3674B5;
   gap: 10px;
 }
 
@@ -272,3 +237,18 @@ footer {
   background-color: #7cbf2b;
   position: absolute;
 }
+
+
+
+
+
+.personal-project, .personal-project-rv {
+  padding: 0 0 50px 0;
+  gap: 40px;
+  box-sizing: border-box;
+}
+
+.personal-project-rv {
+  flex-direction: row-reverse;
+}
+
