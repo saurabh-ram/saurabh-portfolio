@@ -153,7 +153,8 @@ h2:not(#profession) {
   color: #ffffff; /* White text */
   text-decoration: none; /* Remove underline */
   text-transform: uppercase; /* Uppercase letters */
-  background: linear-gradient(135deg, #007bff, #0056b3); /* Blue gradient */
+  /* background: linear-gradient(135deg, #007bff, #0056b3); */
+  background: linear-gradient(135deg, #83b9f4, #3674B5); /* Blue gradient */
   border: none;
   border-radius: 50px; /* Rounded button */
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
