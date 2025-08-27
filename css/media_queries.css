@@ -106,6 +106,12 @@
         height: 220px;
     }
 
+    .get-in-touch-btns {
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+
 }
 
 @media (max-width: 420px) {
