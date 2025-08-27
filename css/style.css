@@ -181,6 +181,14 @@ h2:not(#profession) {
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }
 
+.get-in-touch-btns {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 25px;
+  padding-top: 10px;
+}
+
 
 
 
