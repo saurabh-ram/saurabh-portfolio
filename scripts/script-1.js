@@ -16,6 +16,31 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentImage = 1;
   const totalNoOfImages = 28;
 
+  const soundFiles = [
+  "Omnitrix_scs_1.mp3",
+  "Omnitrix_scs_2.mp3",
+  "Omnitrix_scs_3.mp3",
+  "Omnitrix_scs_4.mp3",
+  "Omnitrix_scs_5.mp3",
+  "Omnitrix_scs_6.mp3",
+  "Omnitrix_scs_7.mp3",
+  "Omnitrix_scs_8.mp3",
+  "Omnitrix_scs_9.mp3",
+  "Omnitrix_scs_10.mp3",
+  "Omnitrix_scs_11.mp3",
+  "Omnitrix_scs_12.mp3",
+  "Omnitrix_scs_13.mp3",
+  "Omnitrix_scs_14.mp3",
+  ];
+
+// Preload all sounds once
+  const sounds = soundFiles.map(sfx => {
+    const audio = new Audio(`../sfx/${sfx}`);
+    audio.preload = "auto";
+    return audio;
+  });
+  const startSound = new Audio(`../sfx/Omnitrix_start.mp3`);
+
   // Trigger animation-1 on clicking image-1
   if (greenbutton && omnitrixbutton) {
     greenbutton.addEventListener("click", () => {
@@ -33,10 +58,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
           // // Wait for animation-2 to complete
           // box.addEventListener("animationend", (event) => {
-          //   if (event.animationName === "animation2" && event.animationName === "animation3" && event.animationName === "animation4") {
+          //   if (event.animationName ==s= "animation2" && event.animationName === "animation3" && event.animationName === "animation4") {
           //   }
           // });
           // }, 500);
+
+          playStartSound(startSound);
 
           setTimeout(() => {
             animation1Completed = true;
@@ -54,13 +81,15 @@ document.addEventListener("DOMContentLoaded", () => {
     omnitrixring.addEventListener("click", () => {
       if (animation1Completed && animation2Completed) {
         omnitrixring.classList.toggle("animation5");
+        playSkillChangeSound(sounds);
+
         setTimeout(() => {
           omnitrixring.classList.toggle("animation5");
           updateSkillImage();
-        }, 1000);
+        }, 580);
         animation5Completed = true;
-    }
-      console.log("Omnitrix Ring image clicked!");
+      }
+      // console.log("Omnitrix Ring image clicked!");
     });
   } else {
     console.error("Element with id 'omnitrixring' not found!");
@@ -70,5 +99,14 @@ document.addEventListener("DOMContentLoaded", () => {
     currentImage = (currentImage % totalNoOfImages) + 1;
 
     skillImage.src = `https://raw.githubusercontent.com/saurabh-ram/saurabh-portfolio/refs/heads/main/skills/${currentImage}.png`;
+  }
+
+  function playStartSound(startSound) {
+    startSound.play();
+  }
+  function playSkillChangeSound(sounds) {
+    const randomIndex = Math.floor(Math.random() * sounds.length);
+    const selectedSound = sounds[randomIndex];
+    selectedSound.play();
   }
 });
