@@ -35,11 +35,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Preload all sounds once
   const sounds = soundFiles.map(sfx => {
-    const audio = new Audio(`../sfx/${sfx}`);
+    const audio = new Audio(`./sfx/${sfx}`);
     audio.preload = "auto";
     return audio;
   });
-  const startSound = new Audio(`../sfx/Omnitrix_start.mp3`);
+  const startSound = new Audio(`./sfx/Omnitrix_start.mp3`);
 
   // Trigger animation-1 on clicking image-1
   if (greenbutton && omnitrixbutton) {
